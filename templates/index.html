@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+    <title>Medeltiden</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body style="background-image: url('{{ url_for('static', filename=background_image) }}');">
+    <div class="container">
+        <h1>Medeltiden</h1>
+        
+           <!-- Lägg till en sektion för att visa den senaste berättelsen -->
+           <div class="container">
+
+           {% if story %}
+           <div class="story-box">
+              
+            {% if choice %}
+            <h3>{{ choice }}</h3>
+            {% endif %}
+              
+             
+           
+            <p>{{ story }}</p>
+           </div>
+           {% endif %}
+           
+           <form action="/" method="post">
+            <div class="transparent-box">
+                <div>
+                    <label>
+                        <input type="radio" id="adventure1" name="adventure" value="I detta äventyr utforskar spelaren livet inuti en medeltida borg, lär sig om riddarnas roll, borgens arkitektur, och vardagslivet för de som bodde där." required>
+                        Upptäckta Hemligheter i Borgen
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" id="adventure2" name="adventure" value="Här får spelaren följa med på en resa längs medeltidens handelsvägar, uppleva marknadslivet, handla med varor och lära sig om ekonomi och kulturella utbyten under medeltiden.">
+                        En Resa Genom Medeltidens Marknader
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" id="adventure3" name="adventure" value="I detta äventyr utforskar spelaren ett kloster och dess skriptorium, där de lär sig om munkarnas liv, betydelsen av manuskript och hur kunskap bevarades och spreds under medeltiden.">
+                        Hemligheterna i Skriptoriet: Munkarnas Värld
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" id="adventure4" name="adventure" value="Detta äventyr tar spelaren till en medeltida festival där de kan lära sig om tidsperiodens musik, mat, kläder, och sociala traditioner genom interaktiva aktiviteter och spel.">
+                        Medeltida Traditioner och Folkliv
+                    </label>
+                </div>
+                <button type="submit">Starta Äventyret</button>
+            </div>
+        </form>
+        
+        <!-- Visa den valda äventyrstexten om det finns någon 
+        <div class="story-box">
+            {% if choice %}
+            <p>Du har valt: {{ choice }}</p>
+            {% endif %}
+        </div>   -->
+    </div>
+</div>
+</body>
+</html>

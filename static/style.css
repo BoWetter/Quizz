@@ -1,0 +1,50 @@
+body {
+    font-family: 'Cinzel', serif;
+  }
+
+  .text {
+    color: #000000; /* Sätter textfärgen till röd */
+}
+
+h1 {
+    transform: scale(1.5);
+  }
+
+/* CSS-stil för att ändra knappens storlek och text till fet stil */
+button[type="submit"] {
+    font-weight: bold; /* Gör texten fet stil */
+    padding: 5px 20px; /* Justera padding för att ändra knappens storlek */
+    border: 2px; 
+}
+
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 20; /* Lägger rubriken överst på sidan */
+  }
+  
+/* Fortsätt använda denna stil för den transparenta boxen */
+.transparent-box {
+    width: 450px; 
+    margin: 40px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.7; /* Ange önskad opacitet */
+    border-radius: 10px; /* Runda kanter */
+    padding: 20px;
+  }
+  
+
+/* New style for the story box */
+.story-box {
+    width: 450px; 
+    margin: 40px;
+    background-color: #ffffff;;
+    border: 1px solid black;
+    opacity: 0.7; /* Ange önskad opacitet */
+    border-radius: 10px; /* Runda kanter */
+    padding: 20px;
+  }
+
+
